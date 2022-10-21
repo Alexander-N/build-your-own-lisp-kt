@@ -18,4 +18,3 @@ fun evalSexpr(sexpr: SExpr, env: Environment): LispVal {
     require(func is Function) { "First element '$func' of S-expression '$sexpr' is not a function" }
     return func(arguments, env)
 }
-

@@ -7,7 +7,7 @@ import io.kotest.matchers.shouldBe
 import java.math.BigDecimal
 import java.math.MathContext.DECIMAL128
 
-class TestEvaluationTests : DescribeSpec({
+class TestEvaluation : DescribeSpec({
     describe("eval") {
         val lispGrammar = LispGrammar()
         it("should return the correct results for arithmetics") {
@@ -414,7 +414,6 @@ class TestEvaluationTests : DescribeSpec({
                     eval(ast, env).toString() shouldBe expected
                 }
             }
-
         }
     }
 })

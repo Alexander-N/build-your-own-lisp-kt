@@ -74,7 +74,7 @@ class LambdaFunction(
         val remainingArguments = arguments.toMutableList()
         while (remainingArguments.isNotEmpty()) {
             require(remainingParams.isNotEmpty()) {
-                "Function got passed too many arguments. Got ${arguments}, Expected ${parameters}."
+                "Function got passed too many arguments. Got $arguments, Expected $parameters."
             }
             val symbol = remainingParams.removeFirst().toString()
             if (symbol == "&") {
