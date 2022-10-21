@@ -30,6 +30,9 @@ class GrammarTests : DescribeSpec({
                 "eval (head {(+ 1 2) (+ 10 20)})",
                 "hello",
                 "1dog",
+                """
+                    "\""
+                """.trimIndent(),
             ) { input: String ->
                 lispGrammar.parseToEnd(input)
             }

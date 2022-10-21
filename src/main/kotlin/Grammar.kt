@@ -26,7 +26,7 @@ class LispGrammar : Grammar<LispVal>() {
 
     private val num by regexToken("""-?[0-9]+([.][0-9])?""")
     private val sym by regexToken("""[a-zA-Z0-9_+\-*/\\=<>!&]+""")
-    private val str by regexToken(""""(\.|[^"])*"""")
+    private val str by regexToken(""""(\\.|[^"])*"""")
     private val comment by regexToken(""";[^\r\n]*""", ignore = true)
     private val whitespace by regexToken("""\s+""", ignore = true)
 
